@@ -1,0 +1,145 @@
+`timescale 1ns / 1ps
+
+import cpu_types_pkg::*;
+
+module pc_tb;
+
+    logic  clk;
+    logic  rst;
+    logic  stall;
+    word_t next_pc;
+    word_t pc_out;
+
+    // DUT
+    pc dut (
+        .clk     (clk),
+        .rst     (rst),
+        .stall   (stall),
+        .next_pc (next_pc),
+        .pc_out  (pc_out)
+    );
+
+    // =====================================================
+    // Helper Task
+    // =====================================================
+    task automatic check_equal (
+        input logic [31:0] actual,
+        input logic [31:0] expected,
+        input string       msg
+    );
+    begin
+        assert (actual == expected)
+        else begin
+            $fatal(
+                "%s failed. Expected=%0h Actual=%0h",
+                msg,
+                expected,
+                actual
+            );
+        end
+    end
+    endtask
+
+    // =====================================================
+    // Clock Generation
+    // =====================================================
+    always #5 clk = ~clk;
+
+    // =====================================================
+    // Test Sequence
+    // =====================================================
+    initial begin
+
+        clk     = 0;
+        rst     = 1;
+        stall   = 0;
+        next_pc = 32'd0;
+
+        // ==========================================
+        // Reset Test
+        // ==========================================
+        @(posedge clk);
+        #1;
+
+        check_equal(
+            pc_out,
+            32'd0,
+            "Reset Test"
+        );
+
+        rst = 0;
+
+        // ==========================================
+        // Normal Update Test #1
+        // ==========================================
+        next_pc = 32'h00000004;
+
+        @(posedge clk);
+        #1;
+
+        check_equal(
+            pc_out,
+            32'h00000004,
+            "PC Update Test 1"
+        );
+
+        // ==========================================
+        // Normal Update Test #2
+        // ==========================================
+        next_pc = 32'h00000008;
+
+        @(posedge clk);
+        #1;
+
+        check_equal(
+            pc_out,
+            32'h00000008,
+            "PC Update Test 2"
+        );
+
+        // ==========================================
+        // Stall Test
+        // ==========================================
+        stall   = 1;
+        next_pc = 32'h0000000C;
+
+        @(posedge clk);
+        #1;
+
+        check_equal(
+            pc_out,
+            32'h00000008,
+            "Stall Test"
+        );
+
+        // ==========================================
+        // Resume Test
+        // ==========================================
+        stall = 0;
+
+        @(posedge clk);
+        #1;
+
+        check_equal(
+            pc_out,
+            32'h0000000C,
+            "Resume After Stall Test"
+        );
+
+        // ==========================================
+        // Final Check
+        // ==========================================
+        check_equal(
+            pc_out,
+            32'h0000000C,
+            "Final PC Value"
+        );
+
+        $display("==================================");
+        $display("PC TEST PASSED");
+        $display("==================================");
+
+        $finish;
+    end
+
+endmodule

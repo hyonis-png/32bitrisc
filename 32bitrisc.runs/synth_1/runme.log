@@ -1,0 +1,423 @@
+
+*** Running vivado
+    with args -log top_fpga.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_fpga.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Mon Jul 13 11:19:52 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source top_fpga.tcl -notrace
+create_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 663.383 ; gain = 220.207
+Command: read_checkpoint -auto_incremental -incremental C:/Users/heyso/32bitrisc/32bitrisc.srcs/utils_1/imports/synth_1/pc_tb.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/heyso/32bitrisc/32bitrisc.srcs/utils_1/imports/synth_1/pc_tb.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top_fpga -part xc7s25csga324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s25'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s25'
+INFO: [Device 21-403] Loading part xc7s25csga324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 37744
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1368.055 ; gain = 540.309
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_fpga' [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/top_fpga.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'cpu_top' [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/cpu_top.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'if_stage' [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/if_stage.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'pc' [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/pc.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'pc' (0#1) [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/pc.sv:25]
+INFO: [Synth 8-6157] synthesizing module 'imem' [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/imem.sv:25]
+INFO: [Synth 8-3876] $readmem data file 'program.hex' is read successfully [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/imem.sv:33]
+INFO: [Synth 8-6155] done synthesizing module 'imem' (0#1) [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/imem.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'if_stage' (0#1) [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/if_stage.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'instr_decoder' [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/instr_decoder.sv:5]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/instr_decoder.sv:142]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/instr_decoder.sv:177]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/instr_decoder.sv:105]
+INFO: [Synth 8-6155] done synthesizing module 'instr_decoder' (0#1) [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/instr_decoder.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/regfiles.sv:24]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (0#1) [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/regfiles.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'id_ex_reg' [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/id_ex_reg.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'id_ex_reg' (0#1) [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/id_ex_reg.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/ALU.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/ALU.sv:25]
+INFO: [Synth 8-6157] synthesizing module 'ex_mem_reg' [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/ex_mem_reg.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'ex_mem_reg' (0#1) [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/ex_mem_reg.sv:25]
+INFO: [Synth 8-6157] synthesizing module 'dmem' [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/dmem.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'dmem' (0#1) [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/dmem.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'mem_wb_reg' [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/mem_wb_reg.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'mem_wb_reg' (0#1) [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/mem_wb_reg.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'cpu_top' (0#1) [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/cpu_top.sv:4]
+WARNING: [Synth 8-7071] port 'debug_x8' of module 'cpu_top' is unconnected for instance 'cpu' [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/top_fpga.sv:52]
+WARNING: [Synth 8-7023] instance 'cpu' of module 'cpu_top' has 15 connections declared, but only 14 given [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/top_fpga.sv:52]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/uart.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/uart.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/uart_rx.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (0#1) [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/uart_rx.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'top_fpga' (0#1) [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/top_fpga.sv:3]
+WARNING: [Synth 8-6014] Unused sequential element uart_start_seen_reg was removed.  [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/top_fpga.sv:102]
+WARNING: [Synth 8-6014] Unused sequential element uart_busy_seen_reg was removed.  [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/top_fpga.sv:103]
+WARNING: [Synth 8-3848] Net debug_x8 in module/entity top_fpga does not have driver. [C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/top_fpga.sv:26]
+WARNING: [Synth 8-7129] Port addr[30] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[29] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[28] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[27] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[26] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[25] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[24] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[23] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[22] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[21] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[20] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[19] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[18] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[17] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[16] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[15] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[14] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[1] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[0] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[31] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[30] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[29] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[28] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[27] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[26] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[25] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[24] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[23] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[22] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[21] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[20] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[19] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[18] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[17] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[16] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[15] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[14] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[13] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[12] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[11] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[10] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[1] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[0] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[5] in module top_fpga is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[4] in module top_fpga is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[3] in module top_fpga is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[2] in module top_fpga is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn[3] in module top_fpga is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn[2] in module top_fpga is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn[1] in module top_fpga is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1494.898 ; gain = 667.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1494.898 ; gain = 667.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1494.898 ; gain = 667.152
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 1494.898 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/heyso/32bitrisc/32bitrisc.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [C:/Users/heyso/32bitrisc/32bitrisc.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/heyso/32bitrisc/32bitrisc.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_fpga_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_fpga_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1543.742 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.083 . Memory (MB): peak = 1543.742 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1543.742 ; gain = 715.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s25csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1543.742 ; gain = 715.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1543.742 ; gain = 715.996
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                   START |                               01 |                               01
+                    DATA |                               10 |                               10
+                    STOP |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                   START |                               01 |                               01
+                    DATA |                               10 |                               10
+                    STOP |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_rx'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 1543.742 ; gain = 715.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 5     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 45    
+	               16 Bit    Registers := 2     
+	                8 Bit    Registers := 4     
+	                5 Bit    Registers := 6     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 24    
++---RAMs : 
+	             128K Bit	(4096 X 32 bit)          RAMs := 1     
++---Muxes : 
+	 257 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 10    
+	   3 Input   32 Bit        Muxes := 2     
+	   4 Input   16 Bit        Muxes := 2     
+	   4 Input    8 Bit        Muxes := 2     
+	   7 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 2     
+	   3 Input    2 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 41    
+	   3 Input    1 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 12    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 90 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7129] Port addr[30] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[29] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[28] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[27] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[26] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[25] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[24] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[23] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[22] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[21] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[20] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[19] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[18] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[17] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[16] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[15] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[14] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[1] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[0] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[5] in module top_fpga is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[4] in module top_fpga is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[3] in module top_fpga is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[2] in module top_fpga is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn[3] in module top_fpga is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn[2] in module top_fpga is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn[1] in module top_fpga is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 1634.180 ; gain = 806.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++--------------+------------+-----------+----------------------+------------------+
+|Module Name   | RTL Object | Inference | Size (Depth x Width) | Primitives       | 
++--------------+------------+-----------+----------------------+------------------+
+|cpu/dmem_inst | ram_reg    | Implied   | 4 K x 32             | RAM256X1S x 512  | 
++--------------+------------+-----------+----------------------+------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:01:02 . Memory (MB): peak = 1706.363 ; gain = 878.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:03 ; elapsed = 00:01:11 . Memory (MB): peak = 1794.621 ; gain = 966.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++--------------+------------+-----------+----------------------+------------------+
+|Module Name   | RTL Object | Inference | Size (Depth x Width) | Primitives       | 
++--------------+------------+-----------+----------------------+------------------+
+|cpu/dmem_inst | ram_reg    | Implied   | 4 K x 32             | RAM256X1S x 512  | 
++--------------+------------+-----------+----------------------+------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:05 ; elapsed = 00:01:14 . Memory (MB): peak = 1794.621 ; gain = 966.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:12 ; elapsed = 00:01:22 . Memory (MB): peak = 1994.699 ; gain = 1166.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:12 ; elapsed = 00:01:22 . Memory (MB): peak = 1994.699 ; gain = 1166.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:13 ; elapsed = 00:01:23 . Memory (MB): peak = 1994.699 ; gain = 1166.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:13 ; elapsed = 00:01:23 . Memory (MB): peak = 1994.699 ; gain = 1166.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:13 ; elapsed = 00:01:23 . Memory (MB): peak = 1994.699 ; gain = 1166.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:13 ; elapsed = 00:01:23 . Memory (MB): peak = 1994.699 ; gain = 1166.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     1|
+|2     |CARRY4    |    68|
+|3     |LUT1      |    18|
+|4     |LUT2      |   163|
+|5     |LUT3      |    85|
+|6     |LUT4      |   156|
+|7     |LUT5      |   291|
+|8     |LUT6      |   809|
+|9     |MUXF7     |   259|
+|10    |MUXF8     |    36|
+|11    |RAM256X1S |   512|
+|12    |FDCE      |    77|
+|13    |FDPE      |     1|
+|14    |FDRE      |  1504|
+|15    |FDSE      |     1|
+|16    |IBUF      |     7|
+|17    |OBUF      |     1|
+|18    |OBUFT     |     4|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:13 ; elapsed = 00:01:23 . Memory (MB): peak = 1994.699 ; gain = 1166.953
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 26 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:59 ; elapsed = 00:01:19 . Memory (MB): peak = 1994.699 ; gain = 1118.109
+Synthesis Optimization Complete : Time (s): cpu = 00:01:14 ; elapsed = 00:01:24 . Memory (MB): peak = 1994.699 ; gain = 1166.953
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 1994.699 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 875 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1994.699 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 512 instances were transformed.
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 512 instances
+
+Synth Design complete | Checksum: 4b76e4bf
+INFO: [Common 17-83] Releasing license: Synthesis
+57 Infos, 81 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:23 ; elapsed = 00:01:57 . Memory (MB): peak = 1994.699 ; gain = 1323.848
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1994.699 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/heyso/32bitrisc/32bitrisc.runs/synth_1/top_fpga.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file top_fpga_utilization_synth.rpt -pb top_fpga_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 13 11:22:11 2026...

@@ -1,0 +1,4 @@
+Time resolution is 1 ps
+Fatal: x1 incorrect
+Time: 525 ns  Iteration: 0  Process: /cpu_top_tb/Initial36_15  Scope: cpu_top_tb  File: C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/cpu_top_tb.sv Line: 58
+$finish called at time : 525 ns
