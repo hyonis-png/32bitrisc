@@ -1,0 +1,7 @@
+.section .text
+.globl trap_entry
+.extern interrupt_handler
+
+trap_entry:
+    call interrupt_handler
+    mret
