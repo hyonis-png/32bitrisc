@@ -22,3 +22,132 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7s25'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s25'
 INFO: [Device 21-403] Loading part xc7s25csga324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12352
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1367.977 ; gain = 540.203
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_fpga' [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/top_fpga.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'cpu_top' [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/cpu_top.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'if_stage' [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/if_stage.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'pc' [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/pc.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'pc' (0#1) [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/pc.sv:25]
+INFO: [Synth 8-6157] synthesizing module 'imem' [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/imem.sv:25]
+INFO: [Synth 8-3876] $readmem data file 'program.hex' is read successfully [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/imem.sv:33]
+INFO: [Synth 8-6155] done synthesizing module 'imem' (0#1) [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/imem.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'if_stage' (0#1) [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/if_stage.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'instr_decoder' [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/instr_decoder.sv:5]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/instr_decoder.sv:142]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/instr_decoder.sv:177]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/instr_decoder.sv:105]
+INFO: [Synth 8-6155] done synthesizing module 'instr_decoder' (0#1) [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/instr_decoder.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/regfiles.sv:24]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (0#1) [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/regfiles.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'id_ex_reg' [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/id_ex_reg.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'id_ex_reg' (0#1) [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/id_ex_reg.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/ALU.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/ALU.sv:25]
+INFO: [Synth 8-6157] synthesizing module 'ex_mem_reg' [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/ex_mem_reg.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'ex_mem_reg' (0#1) [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/ex_mem_reg.sv:25]
+INFO: [Synth 8-6157] synthesizing module 'dmem' [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/dmem.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'dmem' (0#1) [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/dmem.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'mem_wb_reg' [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/mem_wb_reg.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'mem_wb_reg' (0#1) [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/mem_wb_reg.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'cpu_top' (0#1) [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/cpu_top.sv:4]
+WARNING: [Synth 8-7071] port 'debug_x8' of module 'cpu_top' is unconnected for instance 'cpu' [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/top_fpga.sv:52]
+WARNING: [Synth 8-7023] instance 'cpu' of module 'cpu_top' has 15 connections declared, but only 14 given [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/top_fpga.sv:52]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/uart.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/uart.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/uart_rx.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (0#1) [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/uart_rx.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'top_fpga' (0#1) [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/top_fpga.sv:3]
+WARNING: [Synth 8-6014] Unused sequential element uart_start_seen_reg was removed.  [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/top_fpga.sv:102]
+WARNING: [Synth 8-6014] Unused sequential element uart_busy_seen_reg was removed.  [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/top_fpga.sv:103]
+WARNING: [Synth 8-3848] Net debug_x8 in module/entity top_fpga does not have driver. [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/top_fpga.sv:26]
+WARNING: [Synth 8-7129] Port addr[30] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[29] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[28] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[27] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[26] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[25] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[24] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[23] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[22] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[21] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[20] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[19] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[18] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[17] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[16] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[15] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[14] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[1] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[0] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[31] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[30] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[29] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[28] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[27] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[26] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[25] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[24] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[23] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[22] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[21] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[20] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[19] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[18] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[17] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[16] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[15] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[14] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[13] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[12] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[11] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[10] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[1] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[0] in module imem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[5] in module top_fpga is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[4] in module top_fpga is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[3] in module top_fpga is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[2] in module top_fpga is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn[3] in module top_fpga is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn[2] in module top_fpga is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn[1] in module top_fpga is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1495.883 ; gain = 668.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1495.883 ; gain = 668.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1495.883 ; gain = 668.109
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.094 . Memory (MB): peak = 1495.883 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_fpga_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_fpga_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+ERROR: [Common 17-1293] The path 'C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.runs/synth_1/.Xil' already exists, is a directory, but is not writable.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1558.680 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+45 Infos, 55 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:44 . Memory (MB): peak = 1558.680 ; gain = 889.195
+ERROR: [Designutils 20-411] The directory 'C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.runs/synth_1/.Xil/Vivado-41980-Heysomes/realtime' could not be deleted and may be locked. This directory may need to be manually deleted to continue.
+INFO: [Common 17-206] Exiting Vivado at Wed Sep  9 10:36:47 2026...
