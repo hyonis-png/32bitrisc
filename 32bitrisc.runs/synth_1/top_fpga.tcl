@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/heyso/32bitrisc/32bitrisc.runs/synth_1/top_fpga.tcl"
+  variable script "C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.runs/synth_1/top_fpga.tcl"
   variable category "vivado_synth"
 }
 
@@ -63,31 +63,31 @@ create_project -in_memory -part xc7s25csga324-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/heyso/32bitrisc/32bitrisc.cache/wt [current_project]
-set_property parent.project_path C:/Users/heyso/32bitrisc/32bitrisc.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.cache/wt [current_project]
+set_property parent.project_path C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/heyso/32bitrisc/32bitrisc.cache/ip [current_project]
+set_property ip_output_repo c:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_mem C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/program.hex
+read_mem C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/program.hex
 read_verilog -library xil_defaultlib -sv {
-  C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/cpu_types_pkg.sv
-  C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/ALU.sv
-  C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/cpu_top.sv
-  C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/dmem.sv
-  C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/ex_mem_reg.sv
-  C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/id_ex_reg.sv
-  C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/if_stage.sv
-  C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/imem.sv
-  C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/instr_decoder.sv
-  C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/mem_wb_reg.sv
-  C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/pc.sv
-  C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/regfiles.sv
-  C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/uart.sv
-  C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/uart_rx.sv
-  C:/Users/heyso/32bitrisc/32bitrisc.srcs/sources_1/new/top_fpga.sv
+  C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/cpu_types_pkg.sv
+  C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/ALU.sv
+  C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/cpu_top.sv
+  C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/dmem.sv
+  C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/ex_mem_reg.sv
+  C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/id_ex_reg.sv
+  C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/if_stage.sv
+  C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/imem.sv
+  C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/instr_decoder.sv
+  C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/mem_wb_reg.sv
+  C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/pc.sv
+  C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/regfiles.sv
+  C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/uart.sv
+  C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/uart_rx.sv
+  C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/sources_1/new/top_fpga.sv
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -98,12 +98,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/heyso/32bitrisc/32bitrisc.srcs/constrs_1/new/constraints.xdc
-set_property used_in_implementation false [get_files C:/Users/heyso/32bitrisc/32bitrisc.srcs/constrs_1/new/constraints.xdc]
+read_xdc C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/constrs_1/new/constraints.xdc
+set_property used_in_implementation false [get_files C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/constrs_1/new/constraints.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/heyso/32bitrisc/32bitrisc.srcs/utils_1/imports/synth_1/pc_tb.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/utils_1/imports/synth_1/pc_tb.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

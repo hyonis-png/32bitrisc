@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "C:/Users/heyso/32bitrisc/32bitrisc.runs/impl_1/top_fpga.tcl"
+  variable script "C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.runs/impl_1/top_fpga.tcl"
   variable category "vivado_impl"
 }
 
@@ -113,15 +113,15 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/heyso/32bitrisc/32bitrisc.cache/wt [current_project]
-  set_property parent.project_path C:/Users/heyso/32bitrisc/32bitrisc.xpr [current_project]
-  set_property ip_output_repo C:/Users/heyso/32bitrisc/32bitrisc.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.cache/wt [current_project]
+  set_property parent.project_path C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.xpr [current_project]
+  set_property ip_output_repo C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/heyso/32bitrisc/32bitrisc.runs/synth_1/top_fpga.dcp
+  add_files -quiet C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.runs/synth_1/top_fpga.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/heyso/32bitrisc/32bitrisc.srcs/constrs_1/new/constraints.xdc
+  read_xdc C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.srcs/constrs_1/new/constraints.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

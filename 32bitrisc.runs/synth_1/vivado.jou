@@ -3,12 +3,12 @@
 # SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Mon Jul 13 11:19:52 2026
-# Process ID         : 34692
-# Current directory  : C:/Users/heyso/32bitrisc/32bitrisc.runs/synth_1
+# Start of session at: Wed Sep  9 10:35:51 2026
+# Process ID         : 41980
+# Current directory  : C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.runs/synth_1
 # Command line       : vivado.exe -log top_fpga.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_fpga.tcl
-# Log file           : C:/Users/heyso/32bitrisc/32bitrisc.runs/synth_1/top_fpga.vds
-# Journal file       : C:/Users/heyso/32bitrisc/32bitrisc.runs/synth_1\vivado.jou
+# Log file           : C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.runs/synth_1/top_fpga.vds
+# Journal file       : C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.runs/synth_1\vivado.jou
 # Running On         : Heysomes
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 26200
@@ -17,8 +17,8 @@
 # CPU Physical cores : 8
 # CPU Logical cores  : 16
 # Host memory        : 33602 MB
-# Swap memory        : 18584 MB
-# Total Virtual      : 52186 MB
-# Available Virtual  : 7456 MB
+# Swap memory        : 16106 MB
+# Total Virtual      : 49708 MB
+# Available Virtual  : 2278 MB
 #-----------------------------------------------------------
 source top_fpga.tcl -notrace

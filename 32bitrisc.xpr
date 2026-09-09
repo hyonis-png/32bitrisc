@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="71" Path="C:/Users/heyso/32bitrisc/32bitrisc.xpr">
+<Project Product="Vivado" Version="7" Minor="71" Path="C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="b42142c143524fb4b029621b65d337c1"/>

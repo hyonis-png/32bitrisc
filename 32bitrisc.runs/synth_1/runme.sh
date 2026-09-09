@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/heyso/32bitrisc/32bitrisc.runs/synth_1'
+HD_PWD='C:/Users/heyso/OneDrive/Desktop/32bitrisc/32bitrisc.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
