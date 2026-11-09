@@ -3,61 +3,49 @@
 #include "drivers/gpio.h"
 #include "drivers/timer.h"
 #include "drivers/interrupt.h"
+#include "drivers/perf.h"
 #include "rtos/thread.h"
+#include "drivers/uart.h"
 
 #define STACK_SIZE 256
 
 uint32_t stack_A[STACK_SIZE];
 uint32_t stack_B[STACK_SIZE];
 
-void thread_A(void)
-{
-    while (1)
-    {
-        gpio_write_leds(0x1);
-    }
-}
-
-void thread_B(void)
-{
-    while (1)
-    {
-        gpio_write_leds(0x2);
-    }
-}
-
-// trap_entry is defined in trap_entry.S
-extern void trap_entry(void);
-
-void interrupt_handler(void)
-{
-    timer_irq_clear();
-
-    schedule();
-}
-
 int main(void)
 {
-    interrupt_disable();
+    uint32_t start_cycles;
+    uint32_t start_inst;
 
-    // Create the two thread descriptions.
-    thread_create(0, thread_A, stack_A, STACK_SIZE);
-    thread_create(1, thread_B, stack_B, STACK_SIZE);
+    uint32_t end_cycles;
+    uint32_t end_inst;
 
-    interrupt_set_handler(trap_entry);
+    // read counters
+    start_cycles = perf_get_cycles();
+    start_inst = perf_get_instructions();
 
-    uint32_t now = timer_read();
-    timer_set_compare(now + 100000000);
+    // benchmark()
+    volatile int sum = 0;
+    for (int i = 0; i < 1000; i++)
+    {
+        sum += i;
+    }
 
-    timer_irq_enable();
+    // read counters
+    end_cycles = perf_get_cycles();
+    end_inst = perf_get_instructions();
 
-    gpio_write_leds(0x1);
+    // calculate differences
+    uint32_t diff_cycles = end_cycles - start_cycles;
+    uint32_t diff_inst = end_inst - start_inst;
 
-    interrupt_enable();
+    // print results
+    uart_puts("Cycles: ");
+    uart_putnum(diff_cycles);
+    uart_puts("\nInstructions: ");
+    uart_putnum(diff_inst);
 
     while (1)
     {
     }
-
-    return 0;
 }

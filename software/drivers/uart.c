@@ -28,6 +28,23 @@ void uart_putc(char c)
 
     UART_DATA = (uint8_t)c;
 }
+void uart_putnum(uint32_t num)
+{
+    char buffer[10];
+    int i = 0;
+
+    while (num != 0)
+    {
+        buffer[i] = (num % 10) + '0';
+        num /= 10;
+        i++;
+    }
+
+    for (int j = i - 1; j >= 0; j--)
+    {
+        uart_putc(buffer[j]);
+    }
+}   // <-- you need this
 
 void uart_puts(const char *str)
 {
