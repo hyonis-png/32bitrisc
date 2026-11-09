@@ -231,3 +231,4 @@ Development work includes examining critical paths, exploring RTL changes, and r
 - Remove machine-specific paths and document exact firmware build commands.
 - Close timing and publish measured implementation results.<img width="1201" height="930" alt="image" src="https://github.com/user-attachments/assets/dc27045b-5889-4b46-8efe-da7a67306808" />
 
+<img width="1647" height="758" alt="image" src="https://github.com/user-attachments/assets/000e7609-cb8f-4a11-a31f-dfccdfaa2be9" />
